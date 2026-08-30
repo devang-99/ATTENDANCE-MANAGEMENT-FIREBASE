@@ -21,7 +21,9 @@ const CustomSignInService = async (userData: {
   const currentUserData = currentUserSnap.data();
 
   console.log("Current User From Firestore:", currentUserData);
+
   Cookies.set("currentUser", response.user.uid, { expires: 7, secure: true });
+  Cookies.set("userRole", currentUserData.role, { expires: 7, secure: true });
 
   const cleanData = {
     id: response.user.uid,

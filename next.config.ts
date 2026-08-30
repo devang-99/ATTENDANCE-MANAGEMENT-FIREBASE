@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/',
-        destination: '/chat',
-        permanent: true, // Uses a 308 permanent redirect
+        destination: '/dashboard',
+        permanent: true,
       },
     ];
   },

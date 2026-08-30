@@ -3,6 +3,7 @@ import { UserState } from "./user.type";
 import { GetUsersAction } from "./get-users/get-users.action";
 import { CustomSignInAction } from "./user-custom-sign-in/user-custom-sign-in.action";
 import { CustomSignUpAction } from "./user-custom-sign-up/user-custom-sign-up.action";
+import Cookies from "js-cookie";
 
 const initialState: UserState = {
   users: [],
@@ -17,12 +18,13 @@ const usersSlice = createSlice({
   reducers: {
     logout: (state) => {
       state.currentUser = null;
+      Cookies.remove("currentUser");
+      Cookies.remove("userRole");
     },
-    
   },
-  selectors:{
-    usersSelector : (state) => (state.users),
-    currentUserSelector : (state) => (state.currentUser)
+  selectors: {
+    usersSelector: (state) => state.users,
+    currentUserSelector: (state) => state.currentUser,
   },
   extraReducers: (builder) => {
     builder
@@ -68,6 +70,6 @@ const usersSlice = createSlice({
   },
 });
 
-export const {usersSelector , currentUserSelector} = usersSlice.selectors
-export const { logout} = usersSlice.actions;
+export const { usersSelector, currentUserSelector } = usersSlice.selectors;
+export const { logout } = usersSlice.actions;
 export default usersSlice.reducer;
