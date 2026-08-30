@@ -1,0 +1,49 @@
+{
+  "name": "attendance-management",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "server": "nodemon server.js",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@dnd-kit/react": "^0.5.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@hookform/resolvers": "^5.8.0",
+    "@mui/icons-material": "^9.3.1",
+    "@mui/material": "^9.3.1",
+    "@reduxjs/toolkit": "^2.12.0",
+    "axios": "^1.19.0",
+    "express": "^5.2.1",
+    "firebase": "^12.17.1",
+    "js-cookie": "^3.0.8",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-hook-form": "^7.85.0",
+    "react-redux": "^9.3.0",
+    "redux-persist": "^6.0.0",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "use-debounce": "^10.1.1",
+    "usehooks-ts": "^3.1.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
