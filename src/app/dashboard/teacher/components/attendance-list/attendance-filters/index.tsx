@@ -32,7 +32,6 @@ const AttendanceFilters = ({
         marginBottom: "24px",
       }}
     >
-      {/* Batch */}
 
       <FormControl size="small" sx={{ minWidth: 200 }}>
         <InputLabel>Batch</InputLabel>
@@ -50,7 +49,6 @@ const AttendanceFilters = ({
         </Select>
       </FormControl>
 
-      {/* Subject */}
 
       <FormControl
         size="small"
